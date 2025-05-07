@@ -1,0 +1,637 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Suryansh – Ayurvedic Wellness Courses and Lifestyle" />
+  <title>Suryansh | Ayurvedic Wellness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --primary: #e6f4e6;
+      --accent: #a5d6a7;
+      --text-dark: #2e4632;
+      --text-light: #5f795d;
+      --white: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--primary);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--white);
+      box-shadow: var(--shadow);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--text-dark);
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #558b2f;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1554189097-ffe88e998a2b');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      padding: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--text-dark);
+      margin: 3rem 0 1rem;
+    }
+
+    .courses {
+      background: var(--white);
+      padding: 4rem 2rem;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .course-card {
+      background: var(--primary);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .course-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .course-card p {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      display: block;
+      font-size: 1.2rem;
+      color: #4caf50;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .enroll-btn {
+      background-color: var(--accent);
+      color: var(--white);
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .enroll-btn:hover {
+      background-color: #81c784;
+    }
+
+    .about, .contact {
+      padding: 4rem 2rem;
+      background-color: var(--primary);
+    }
+
+    .about-content, .contact-content {
+      max-width: 900px;
+      margin: auto;
+      background: var(--white);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-content h3, .contact-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--text-dark);
+    }
+
+    .about-content p, .contact-content p {
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+      font-size: 1.05rem;
+    }
+
+    footer {
+      background-color: #f1f8e9;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Suryansh</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Embrace Ayurvedic Wellness</h2>
+      <p>Transform your lifestyle through balance, breath, and nature.</p>
+    </div>
+  </section>
+
+  <section class="courses" id="courses">
+    <h2 class="section-title">Our Wellness Courses</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>Ayurvedic Daily Rituals</h3>
+        <p>Learn essential routines to balance your Doshas and boost vitality.</p>
+        <span class="price">₹1,499</span>
+        <a href="#" class="enroll-btn">Enroll Now</a>
+      </div>
+      <div class="course-card">
+        <h3>Healing Through Diet</h3>
+        <p>Understand Ayurvedic food combinations for your body type.</p>
+        <span class="price">₹2,199</span>
+        <a href="#" class="enroll-btn">Enroll Now</a>
+      </div>
+      <div class="course-card">
+        <h3>Pranayama & Meditation</h3>
+        <p>Master breathwork techniques to calm the mind and restore energy.</p>
+        <span class="price">₹999</span>
+        <a href="#" class="enroll-btn">Enroll Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-content">
+      <h3>About Suryansh</h3>
+      <p>
+        Suryansh is a sanctuary for holistic healing rooted in the timeless wisdom of Ayurveda. Founded with the intention to reconnect modern lives with ancient Indian traditions, we empower individuals to live in harmony with nature.
+      </p>
+      <p>
+        Our offerings include courses on mindful breathing, Dosha-balancing meals, meditation, and herbal rituals—each guided by seasoned Ayurvedic practitioners.
+      </p>
+      <p>
+        Suryansh blends age-old practices with contemporary lifestyles, nurturing wellness from the inside out.
+      </p>
+    </div>
+  </section>
+
+  
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Suryansh – Ayurvedic Wellness Courses and Lifestyle" />
+  <title>Suryansh | Ayurvedic Wellness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --primary: #e6f4e6;
+      --accent: #a5d6a7;
+      --text-dark: #2e4632;
+      --text-light: #5f795d;
+      --white: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--primary);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--white);
+      box-shadow: var(--shadow);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--text-dark);
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #558b2f;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1554189097-ffe88e998a2b');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      padding: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--text-dark);
+      margin: 3rem 0 1rem;
+    }
+
+    .pages {
+      padding: 4rem 2rem;
+      background-color: var(--white);
+    }
+
+    .pages-content {
+      max-width: 900px;
+      margin: auto;
+      background: var(--primary);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .pages-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--text-dark);
+    }
+
+    .pages-content p {
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+      font-size: 1.05rem;
+    }
+
+    footer {
+      background-color: #f1f8e9;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+
+
+  
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the benefits of Ayurveda – a 5000-year-old wellness system for modern life.">
+  <title>Benefits of Ayurveda | Suryansh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fdfdf6;
+      color: #2e4632;
+      line-height: 1.8;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #3b5f3b;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    article {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    article h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      color: #4b6b3b;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #5f795d;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>The Comprehensive Benefits of Ayurveda</h1>
+  <article>
+    <p><strong>Ayurveda</strong> is an ancient system of natural healing that originated in India over 5000 years ago. The word Ayurveda comes from the Sanskrit terms "ayus" (life) and "veda" (science or knowledge). Thus, Ayurveda means the science of life — a holistic system that guides us to live in harmony with our body, mind, and environment.</p>
+
+    <h2>1. Personalized Health Based on Doshas</h2>
+    <p>Ayurveda classifies individuals into three primary doshas: Vata, Pitta, and Kapha — each representing a unique combination of the five elements (earth, water, fire, air, and space). Understanding your dosha helps tailor diet, lifestyle, and treatments for optimal well-being. Unlike modern medicine’s one-size-fits-all approach, Ayurveda focuses on personalized health.</p>
+
+    <h2>2. Prevention Over Cure</h2>
+    <p>Ayurveda emphasizes prevention through daily routines (dinacharya), seasonal routines (ritucharya), and mindful living. It encourages regular detox, meditation, oil massages, and herbal support to maintain equilibrium in the body and mind.</p>
+
+    <h2>3. Natural Healing with Herbal Support</h2>
+    <p>Ayurvedic remedies use time-tested herbs like Ashwagandha, Triphala, Turmeric, Neem, and Brahmi. These herbs are known for adaptogenic, anti-inflammatory, antibacterial, and antioxidant properties. They restore balance, reduce stress, and boost immunity without harmful side effects.</p>
+
+    <h2>4. Mental Clarity and Emotional Balance</h2>
+    <p>Practices like meditation, pranayama (breathwork), and yoga are integral to Ayurveda. These techniques help manage anxiety, reduce mental clutter, and improve emotional resilience. Ayurveda treats not just the body but also the mind and soul.</p>
+
+    <h2>5. Better Digestion and Gut Health</h2>
+    <p>Ayurveda considers digestion (Agni) the root of health. A strong digestive fire ensures nutrient absorption and toxin elimination. Remedies include warm water, spices like cumin and ginger, and eating according to your dosha and season.</p>
+
+    <h2>6. Boosted Immunity and Longevity</h2>
+    <p>Ayurvedic lifestyle fosters Ojas – the essence of immunity and vitality. By focusing on sleep quality, nourishment, emotional health, and detox, Ayurveda helps you age gracefully and resist illness naturally.</p>
+
+    <h2>7. Skin, Hair, and Beauty Care</h2>
+    <p>Ayurveda has natural beauty solutions using ingredients like sandalwood, rose, turmeric, aloe vera, and oils. Abhyanga (self-massage), ubtans (herbal scrubs), and Ayurvedic facials support glowing skin and healthy hair without chemicals.</p>
+
+    <h2>8. A Holistic Path to Harmony</h2>
+    <p>Ayurveda offers more than remedies—it offers a way of life. Whether you're facing chronic illness, stress, or just want to feel more aligned, Ayurveda guides you to live with intention, awareness, and balance in everything you do.</p>
+
+    <h2>Conclusion</h2>
+    <p>With its timeless wisdom, Ayurveda continues to serve humanity by offering a sustainable, natural, and deeply intuitive approach to wellness. In a world driven by fast solutions, Ayurveda invites us to slow down and reconnect with nature — both outside and within.</p>
+  </article>
+
+  
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Understand the three Ayurvedic doshas—Vata, Pitta, and Kapha—and learn how to balance them for holistic health.">
+  <title>Understanding the Doshas | Suryansh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fdfdf6;
+      color: #2e4632;
+      line-height: 1.8;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #3b5f3b;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    article {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    article h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      color: #4b6b3b;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #5f795d;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Understanding the Three Doshas in Ayurveda</h1>
+  <article>
+    <p>Ayurveda describes three fundamental energies—Vata, Pitta, and Kapha—that govern all biological processes. Known as doshas, they represent a combination of the five elements and play a vital role in physical and mental health. Understanding your dominant dosha can guide your diet, lifestyle, and health decisions.</p>
+
+    <h2>1. Vata Dosha: The Energy of Movement</h2>
+    <p>Made up of air and space, Vata governs movement in the body—breathing, circulation, nerve impulses, and elimination. People with Vata dominance are creative, energetic, and quick learners but may suffer from anxiety, dry skin, or digestive irregularities when imbalanced.</p>
+
+    <h3>Balancing Vata:</h3>
+    <ul>
+      <li>Eat warm, cooked, and grounding foods</li>
+      <li>Establish daily routines</li>
+      <li>Use warming herbs like ginger and cinnamon</li>
+      <li>Practice calming yoga and meditation</li>
+    </ul>
+
+    <h2>2. Pitta Dosha: The Energy of Transformation</h2>
+    <p>Pitta, composed of fire and water, governs digestion, metabolism, and body temperature. Pitta types are intelligent, determined, and ambitious, but imbalances may cause anger, inflammation, acidity, or skin rashes.</p>
+
+    <h3>Balancing Pitta:</h3>
+    <ul>
+      <li>Favor cooling foods like cucumbers, melons, and mint</li>
+      <li>Avoid spicy, oily, or fried foods</li>
+      <li>Practice moon salutations and calming exercises</li>
+      <li>Spend time in nature, especially water bodies</li>
+    </ul>
+
+    <h2>3. Kapha Dosha: The Energy of Structure</h2>
+    <p>Kapha combines earth and water, providing structure, stability, and lubrication to the body. Kapha individuals are calm, nurturing, and strong but may experience lethargy, weight gain, or congestion when out of balance.</p>
+
+    <h3>Balancing Kapha:</h3>
+    <ul>
+      <li>Consume light, spicy, and warming foods</li>
+      <li>Engage in regular, vigorous exercise</li>
+      <li>Incorporate drying herbs like turmeric and black pepper</li>
+      <li>Avoid dairy, cold foods, and oversleeping</li>
+    </ul>
+
+    <h2>How to Know Your Dosha?</h2>
+    <p>Most people have a dominant dosha or a dual-dosha constitution. Ayurvedic practitioners use questionnaires, pulse diagnosis, and physical and mental assessments to determine this. Once identified, lifestyle adjustments can help maintain balance and prevent disease.</p>
+
+    <h2>Conclusion</h2>
+    <p>The three doshas are the foundation of Ayurvedic healing. By aligning your habits with your dosha type, you can experience optimal energy, emotional harmony, and robust health. Ayurveda empowers you to take charge of your wellness through intuitive, nature-based choices.</p>
+  </article>
+
+  
+
+  <section class="contact" id="contact">
+    <div class="contact-content">
+      <h3>Contact Us</h3>
+      
+      <p><strong>Email:</strong> suryansh.ayurveda@gmail.com</p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/suryansh.ayurveda" target="_blank">@suryansh.ayurveda</a></p>
+    </div>
+  </section>
+
+
+  
+
+
+  <footer>
+    © 2025 Suryansh. All rights reserved. Crafted with care for your wellness journey.
+  </footer>
+</body>
+
+</html>
+
+
+<nav class="navbar">
+    <div class="brand-title">Suryansh Ayurveda</div>
+    <a href="javascript:void(0);" class="toggle-button" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    
+  </nav>
+  

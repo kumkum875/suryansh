@@ -1,0 +1,46 @@
+@media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .cta {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  
+    .header {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .toggle-button {
+      display: flex;
+    }
+
+    .navbar-links {
+      display: none;
+      width: 100%;
+      text-align: center;
+      background-color: #3b5f3b;
+    }
+
+    .navbar-links ul {
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+
+    .navbar-links.active {
+      display: block;
+    }
+  }
